@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'home/home'
-  get 'welcome/index'
+  get 'bookings/bookings'
   resources :car_parks
   resources :bookings
 

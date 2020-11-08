@@ -18,6 +18,7 @@
 
 $font: 'Times New Roman', 'Times', serif;
 $color: #FFFFFF;
+$blue: #00FF;
 
 body {
     font-family: $font;
@@ -28,4 +29,17 @@ body {
 
 h1 {
     text-transform: uppercase;
+}
+
+.home-title {
+    background-color: $blue;
+}
+
+.button-text {
+    font-family: $font;
+    font-size: 20px;
+}
+
+.btn-main {
+    background-color: $blue;
 }

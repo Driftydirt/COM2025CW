@@ -37,3 +37,7 @@ en:
     home:
       title: Car Park Bookings
       welcome: Welcome to my car park bookings site!
+      booking_button: Book Now
+      show_car_park: View Spaces
+      contact: Contact Us 
+      placeholder: placeholder
