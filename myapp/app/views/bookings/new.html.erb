@@ -1,0 +1,16 @@
+<h1> New Booking </h1>
+<%= form_with scope: :bookings, url:bookings_path,  local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  <p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
