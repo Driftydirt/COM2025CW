@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  text: MyText
+  driver_name: MyString
+  license_plate_number: MyString
+  space_number: 1
+  car_park: one
 
 two:
-  name: MyString
-  text: MyText
+  driver_name: MyString
+  license_plate_number: MyString
+  space_number: 1
+  car_park: two

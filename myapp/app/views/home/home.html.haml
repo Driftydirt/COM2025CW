@@ -1,14 +1,15 @@
-
-%div{:class => "jumbotron text-center home-title"}
-    %h1= t('.title')
-    %p= t('.welcome')
+:javascript
+= link_to "../", :action => 'get' do
+    %div{:class => "jumbotron text-center home-title"}
+        %h1= t('.title')
+        %p= t('.welcome')
 %div{:class => "col-sm-3"}
 %div{:class => "col-sm-2 text-center"}
-    %button.btn.btn-main{:type => "button"} 
-        %p{:class => "button-text"}= t('.booking_button')
+    = button_to t('.booking_button'), "bookings/bookings", :id => "booking", |
+    :class => "btn btn-main button-text", :method => :get                          |
 %div{:class => "col-sm-2 text-center"}
-    %button.btn.btn-main{:type => "button"} 
-        %p{:class => "button-text"}= t('.show_car_park')
+    = button_to t('.show_car_park'), "car_park", :id => "car_park", |  
+    :class => "btn btn-main button-text", :method => :get 
 %div{:class => "col-sm-2 text-center"}
-    %button.btn.btn-main{:type => "button"} 
-        %p{:class => "button-text"}= t('.contact')
+    = button_to t('.contact'), "contact", :id => "contact", |  
+    :class => "btn btn-main button-text", :method => :get 

@@ -19,12 +19,14 @@
 $font: 'Times New Roman', 'Times', serif;
 $color: #FFFFFF;
 $blue: #00FF;
+$text_color: black;
 
 body {
     font-family: $font;
     background-color: $color;
     margin:10px;
     padding:10px;
+    color: $text_color;
 }
 
 h1 {
@@ -32,6 +34,11 @@ h1 {
 }
 
 .home-title {
+    background-color: $blue;
+    color: $text_color;
+}
+
+.background_blue {
     background-color: $blue;
 }
 
@@ -42,4 +49,8 @@ h1 {
 
 .btn-main {
     background-color: $blue;
+}
+
+.body_text {
+    font-family: $font;
 }

@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+space_1 = ParkingSpace.create(:number => 11, :car_park_id => 1)
+space_2 = ParkingSpace.create(:number => 12, :car_park_id => 1)
+space_3 = ParkingSpace.create(:number => 13, :car_park_id => 1)
+space_4 = ParkingSpace.create(:number => 14, :car_park_id => 1)
+space_5 = ParkingSpace.create(:number => 15, :car_park_id => 1)
+space_6 = ParkingSpace.create(:number => 16, :car_park_id => 1)
+space_7 = ParkingSpace.create(:number => 17, :car_park_id => 1)
+space_8 = ParkingSpace.create(:number => 18, :car_park_id => 1)
+space_9 = ParkingSpace.create(:number => 19, :car_park_id => 1)
+space_10 = ParkingSpace.create(:number => 110, :car_park_id => 1)
+space_11 = ParkingSpace.create(:number => 21, :car_park_id => 1)
+
+
+
+
+
+
+spaces = ([space_1, space_2, space_3, space_4, space_5, space_6, space_7, space_8, space_9, space_10, space_11 ])
+car_park_1 = CarPark.create(:name => 'Car Park 1', :number_spaces => 15, :parking_space => spaces)
+
+

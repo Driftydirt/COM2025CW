@@ -41,3 +41,12 @@ en:
       show_car_park: View Spaces
       contact: Contact Us 
       placeholder: placeholder
+  bookings:
+    bookings:
+      title: Car Park Bookings
+      subtitle: Enter your details below
+      driver_name: "Enter the name of the driver:"
+      number_plate: "Enter the registration number of your car:" 
+      select_space: "Select the space you wish to book:"
+      select_start_time: "Choose what time you want to use space from:"
+      select_end_time: "Choose the time you will be done with the parking space:"
