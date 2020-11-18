@@ -1,0 +1,16 @@
+= link_to "../", :class => "home-title" , :action => 'get' do
+    %div{:class => "jumbotron text-center home-title"}
+        %h1= t('.title')
+        %p= t('.subtitle')
+- @car_park.each do |car_park|
+    %div
+        %p.text-center= car_park.name
+    - set_num_of_rows(car_park).times do |i|
+        %div
+            %div{:class => "col-sm-1"}
+            - car_park.parking_space.limit(10).offset((i)*10).each do |space|
+                %button.btn.btn-primary.col-sm-1.home-title{:type => "button"}
+                    %p= "#{space.number}"
+        %div{:class => "col-sm-1 right-padding"}
+
+
