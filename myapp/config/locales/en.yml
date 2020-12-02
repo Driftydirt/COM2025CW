@@ -41,12 +41,35 @@ en:
       show_car_park: View Spaces
       contact: Contact Us 
       placeholder: placeholder
-  bookings:
-    bookings:
+  booking:
+    new:
       title: Car Park Bookings
       subtitle: Enter your details below
       driver_name: "Enter the name of the driver:"
       number_plate: "Enter the registration number of your car:" 
       select_space: "Select the space you wish to book:"
-      select_start_time: "Choose what time you want to use space from:"
-      select_end_time: "Choose the time you will be done with the parking space:"
+      select_start_time: "Choose the start time of your booking:"
+      select_end_time: "Choose the finishing time of your booking:" 
+    alt_new:
+      title: Car Park Bookings
+      subtitle: Enter your details below
+      driver_name: "Enter the name of the driver:"
+      number_plate: "Enter the registration number of your car:"
+      select_start_time: "Choose the start time of your booking:"
+      parking_space: "Select the space you wish to book:"
+      select_end_time: "Choose the finishing time of your booking:" 
+    show:
+      title: Car Park Bookings
+      subtitle: Details for selected booking below
+  car_park:
+    car_park:
+      title: Car Park Bookings
+      subtitle: Select a space
+      view_car_park: View car park
+  parking_space:
+    show:
+      title: Car Park Bookings  
+      currently_booked: "This space is booked at these times:"
+      book_now: Book Now!
+      show_booking: Show Booking
+      not_booked: This space has not been booked yet

@@ -16,19 +16,19 @@ ActiveRecord::Schema.define(version: 2020_11_15_151219) do
     t.string "driver_name"
     t.string "license_plate_number"
     t.integer "space_number"
-    t.integer "car_park_id"
+    t.integer "parking_space_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "start_time"
     t.string "finish_time"
     t.string "cost"
-    t.index ["car_park_id"], name: "index_bookings_on_car_park_id"
+    t.index ["parking_space_id"], name: "index_bookings_on_parking_space_id"
   end
 
   create_table "car_parks", force: :cascade do |t|
     t.string "name"
     t.integer "number_spaces"
-    t.string "spaces"
+    t.string "parking_space"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_11_15_151219) do
   create_table "parking_spaces", force: :cascade do |t|
     t.integer "number"
     t.integer "car_park_id"
+    t.string "booking"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["car_park_id"], name: "index_parking_spaces_on_car_park_id"

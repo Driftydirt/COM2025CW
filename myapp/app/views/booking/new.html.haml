@@ -1,0 +1,41 @@
+
+= link_to root_path do
+    %div{:class => "jumbotron text-center home-title"}
+        %h1= t('.title')
+        %h3= t('.subtitle')
+%div.col.col-sm-6.offset-sm-3.background-blue
+    %div.col.col-sm-8.offset-sm-2.text-center
+        %form
+            %label{:for => "name"}
+                %div{:class => "body_text"}
+                    %p= t('.driver_name')
+            %br/
+            %input#name{:name => "name", :type => "text"}
+            %br/
+            %label{:for => "number_plate"}
+                %div{:class => "body_text"}
+                    %p= t('.number_plate')
+            %br/
+            %input#number_plate{:name => "number_plate", :type => "text"}
+            %br/
+            %label{:for => "number_space"}
+                %div{:class => "body_text"}
+                    %p= t('.select_space')
+            %br/
+            %input#number_space{:name => "number_space", :type => "text"}
+            %br/
+            %label{:for => "start_time"}
+                %div{:class => "body_text"}
+                    %p= t('.select_start_time')
+            %br/
+            %input#number_space{:name => "start_time", :type => "text"}
+            %br/
+            %label{:for => "end_time"}
+                %div{:class => "body_text"}
+                    %p= t('.select_end_time')
+            %br/
+            %input#number_space{:name => "number_space", :type => "text"}
+            %br/
+            %input.top-bottom-margin.btn.btn-info{:type => "submit", :value => "Submit"}/
+
+        

@@ -1,0 +1,19 @@
+= link_to root_path do
+    %div{:class => "jumbotron text-center home-title"}
+        %h1= t('.title')
+        %h3= t('.subtitle')
+%div.row.offset-sm-4
+    %table
+        %tr.row
+            %th.col.col-sm-2= t('.driver_name')
+            %th.col.col-sm-2= t('.number_plate')
+            %th.col.col-sm-2= t('.start_time')
+            %th.col.col-sm-2= t('.finish_time')
+            %th.col.col-sm-2= t('.cost')
+
+        %tr.row
+            %td.col.col-sm-2= @booking.driver_name
+            %td.col.col-sm-2= @booking.license_plate_number
+            %td.col.col-sm-2= @booking.start_time
+            %td.col.col-sm-2= @booking.finish_time
+            %th.col.col-sm-2= @booking.cost

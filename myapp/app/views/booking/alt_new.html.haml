@@ -1,0 +1,28 @@
+
+= link_to root_path do
+    %div{:class => "jumbotron text-center home-title"}
+        %h1= t('.title')
+        %h3= t('.subtitle')
+%div.col.col-sm-6.offset-sm-3.background-blue
+    %div.col.col-sm-8.offset-sm-2.text-center
+        =form_with scope: :booking, local: true do |form|
+            %p.main-text
+                =form.label t('.driver_name')
+                =form.text_field :driver_name
+            %p.main-text
+                =form.label t('.number_plate')
+                =form.text_field :license_plate_number
+            %p.main-text
+                =form.label t('.parking_space')
+                =form.text_field :space_number, value: @parking_space.id    
+            %p.main-text
+                =form.label t('.select_start_time')
+                =form.number_field :start_time, step: 100, min:0, max:2300
+            %p.main-text
+                =form.label t('.select_end_time')
+                =form.number_field :finish_time, step: 100, min:0, max:2300
+            %p.main-text
+                =form.label t('.cost')
+                =form.number_field :cost
+            %p.btn
+                =form.submit
