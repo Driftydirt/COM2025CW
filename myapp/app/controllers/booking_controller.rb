@@ -3,29 +3,30 @@ class BookingController < ApplicationController
   end 
 
   def create
-      parking_space = ParkingSpace.find(:booking.id)
+      @parking_space = ParkingSpace.find(booking_params.values.at(2))
+      if check_overlap
+        redirect_to booking_fail_path
+        return
+      end
       parking_space.booking.create(booking_params)
+  end
+
+  def check_overlap
+    bookings = @parking_space.booking.all
+    booking = booking_params.values
+    for currentBooking in bookings
+      if booking.at(3).to_i < currentBooking.finish_time.to_i && currentBooking.start_time.to_i < booking.at(4).to_i
+        return true
+      end 
+    end
+    return false
   end
 
   def create_alt
       @parking_space = ParkingSpace.find(params[:id])
-      bookings = @parking_space.booking.all.to_a
-      available_times = generate_available_times(bookings)
-      booking = booking_params.values
-      booking_start_time = booking.at(3).to_i
-      booking_finish_time = booking.at(4).to_i
-      puts booking_start_time
-      puts booking_finish_time
-      if available_times.at(booking_start_time / 100) == "booked" || available_times.at(booking_finish_time / 100) == "booked"
+      if check_overlap
         redirect_to booking_fail_path
         return
-      end
-      duration_of_stay = (booking_finish_time - booking_start_time - 100) / 100
-      duration_of_stay.times do |i|
-        if available_times.at((booking_start_time) / 100 + i) == true
-          redirect_to booking_fail_path
-          return
-        end
       end
       @parking_space.booking.create(booking_params)
       redirect_to root_path
