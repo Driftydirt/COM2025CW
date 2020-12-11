@@ -1,16 +1,13 @@
-= link_to root_path do
-    %div{:class => "jumbotron text-center home-title"}
-        %h1= t('.title')
 %div{:class => "row"}
     %div.col.col-sm-3
         = link_to car_park_path do
-            %button.btn.btn-main.col.col-sm-6{:type => "button"} 
+            %button.btn.btn-main.col{:type => "button"} 
                 %p.button-text= t('.view_car_park')
     %div.col.col-sm-6
         - if currently_booked(@parking_space) == true
             %p.text-center= t('.currently_booked')
             %ul.list-group.col.col-sm-12{:id => "no-margin"}
-            -@parking_space.booking.order("start_time").each do |booking|
+            -@parking_space.booking.order("start_time / 100").each do |booking|
                 =link_to booking_path(booking.id) do
                     %li.list-group-item
                         %p #{booking.start_time} - #{booking.finish_time}
@@ -18,7 +15,7 @@
             %p.text-center= t('.not_booked')
 
         =link_to booking_alt_new_path(@parking_space) do
-            %div.col.col-sm-4.offset-sm-4.top-padding
+            %div.col.col-sm-6.offset-sm-3.top-padding
                 %button.btn.btn-main.col{:type => "button"}
                     %p.button-text= t('.book_now')
         

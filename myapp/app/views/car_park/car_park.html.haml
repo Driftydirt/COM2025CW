@@ -1,7 +1,3 @@
-= link_to root_path do
-    %div{:class => "jumbotron text-center home-title"}
-        %h1= t('.title')
-        %h3= t('.subtitle')
 - @car_park.each do |car_park|
     %div
         %p.text-center= car_park.name
