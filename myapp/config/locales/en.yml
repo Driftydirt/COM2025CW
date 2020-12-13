@@ -30,6 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  layouts:
+    header:
+      title: Car Park Bookings
+      welcome: Welcome to my car park bookings site!
   app_title: Car Park Bookings
   app_description: An online way to book parking spaces in car parks.
   
@@ -48,6 +52,7 @@ en:
       driver_name: "Enter the name of the driver:"
       number_plate: "Enter the registration number of your car:" 
       select_space: "Select the space you wish to book:"
+      parking_space: "Select the space you wish to book"
       select_start_time: "Choose the start time of your booking:"
       select_end_time: "Choose the finishing time of your booking:" 
     alt_new:
@@ -61,6 +66,9 @@ en:
     show:
       title: Car Park Bookings
       subtitle: Details for selected booking below
+    fail:
+      return: Go Back
+      booking_failed: This booking was not saved because the space was already booked at the time selected
   car_park:
     car_park:
       title: Car Park Bookings
@@ -73,3 +81,7 @@ en:
       book_now: Book Now!
       show_booking: Show Booking
       not_booked: This space has not been booked yet
+  contact_owner:
+    index:
+      email_address: Please enter your email address
+      email_content: "Email content:"

@@ -3,11 +3,9 @@
 one:
   name: MyString
   number_spaces: MyString
-  integer: MyString
-  spaces: MyString
+  parking_space: MyString
 
 two:
   name: MyString
   number_spaces: MyString
-  integer: MyString
-  spaces: MyString
+  parking_space: MyString

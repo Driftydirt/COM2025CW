@@ -4,10 +4,8 @@ one:
   driver_name: MyString
   license_plate_number: MyString
   space_number: 1
-  car_park: one
 
 two:
   driver_name: MyString
   license_plate_number: MyString
   space_number: 1
-  car_park: two
