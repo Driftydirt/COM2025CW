@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class BookingsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save booking without correct parameters" do
+    booking = Booking.new
+    assert_not booking.save, "Saved the booking without the correct parameters"
+  end
 end

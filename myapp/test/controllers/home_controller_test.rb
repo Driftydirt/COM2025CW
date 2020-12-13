@@ -6,8 +6,6 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     assert_select 'title', 'Car Park Bookings'
-    assert_select 'h1', 'Car Park Bookings'
-    assert_select 'p', 'Welcome to my car park bookings site!'
   end
 
 end
