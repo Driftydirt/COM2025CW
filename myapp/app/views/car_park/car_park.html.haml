@@ -1,6 +1,9 @@
+<!-- HTML for displaying car parks, this will scale with any number of car parks -->
+
 - @car_park.each do |car_park|
     %div
         %p.text-center= car_park.name
+    <!-- Using a helper method to determine how many rows of spaces need to be created -->
     - set_num_of_rows(car_park).times do |i|
         %div{:class => "offset-sm-1"}
             - car_park.parking_space.limit(10).offset((i)*10).each do |space|

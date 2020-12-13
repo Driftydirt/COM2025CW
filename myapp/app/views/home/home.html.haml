@@ -1,5 +1,9 @@
+<!-- This page is the root of the website and is used as a homepage
+accessible by clicking anywhere on the header on every page -->
 %div{:class => "col-sm-6 col offset-sm-3"}
     %div.row.d-flex.justify-content-center
+        <!-- These three buttons allow navigation to the three main sections of the website
+        the booking page, the car park viewer and the contact page -->
         = link_to booking_new_path do    
             %div{:class => "text-center left-right-margin"}
                 %button.btn.btn-main{:type => "button"}

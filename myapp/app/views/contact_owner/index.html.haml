@@ -1,0 +1,16 @@
+%div.row
+    %div.col.col-sm-10.offset-sm-1
+        %div.col.text-center
+            =form_with scope: :email, local: true do |form|
+                %p.main-text
+                    %div.col
+                        =form.label t('.email_address')
+                    %div.col.col-sm-12
+                        =form.text_field :email_address 
+                %p.main-text
+                    %div.col
+                        =form.label t('.email_content')
+                    %div.col.col-sm-12
+                        =form.text_area :email_content 
+                %p.btn
+                    =form.submit

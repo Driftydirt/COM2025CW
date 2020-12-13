@@ -1,9 +1,14 @@
+<!-- HTML for showing a parking space -->
 %div{:class => "row"}
+    <!-- A button to return to the car park page -->
     %div.col.col-sm-3
         = link_to car_park_path do
             %button.btn.btn-main.col{:type => "button"} 
                 %p.button-text= t('.view_car_park')
     %div.col.col-sm-6
+        <!-- This if statment determines what version of the page to display.
+        If this space is booked then the bookings will be displayed, along with 
+        a book now button, if not then only the book now button will be displayed -->
         - if currently_booked(@parking_space) == true
             %p.text-center= t('.currently_booked')
             %ul.list-group.col.col-sm-12{:id => "no-margin"}

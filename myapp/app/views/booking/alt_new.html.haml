@@ -1,27 +1,29 @@
+<!-- HTML for handling the bookings that come from user navigating through from a car park 
+this webpage takes the id of the space from the page the user previously navigated from and 
+puts it into the text field for user convenience -->
+
 %div.col.col-sm-6.offset-sm-3.background-blue
     %div.col.col-sm-8.offset-sm-2.text-center
         =form_with scope: :booking, local: true do |form|
-            %p.main-text
+            %p.main-text.line-height-fix
                 =form.label t('.driver_name')
                 =form.text_field :driver_name, id: 'driverName'
-            %p.main-text
+            %p.main-text.line-height-fix
                 =form.label t('.number_plate')
                 =form.text_field :license_plate_number, id: 'registrationNumber'
-            %p.main-text
+            %p.main-text.line-height-fix
                 =form.label t('.parking_space')
                 =form.text_field :space_number, value: @parking_space.id, id: 'parkingSpaceId'
-            %p.main-text
+            %p.main-text.line-height-fix
                 =form.label t('.select_start_time')
                 =form.number_field :start_time, step: 100, min:0, max:2300, id: 'startTime'
-            %p.main-text
+            %p.main-text.line-height-fix
                 =form.label t('.select_end_time')
                 =form.number_field :finish_time, step: 100, min:0, max:2300, id: 'finishTime'
             %p.btn{:id => "submit"}
-                =form.submit 
-:javascript
-    jQuery(document).ready(function() {
-        alert('working');
-    });  
+                =form.submit
+<!-- Javascript for checking if forms are empty and throwing an alert with the correct error message -->
+:javascript  
     jQuery('#submit').click(function(e) {
         if(jQuery('#driverName').val() == '') {
             alert('Driver name can not be empty');
